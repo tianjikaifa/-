@@ -56,37 +56,16 @@
         </thead>
         <tbody>
         <tr>
-            <td> 1.0.2</td>
-            <td>
-                <button class="download-button" onclick="downloadFile('tianji-1.0.2-arm64-v8a_armeabi-v7a-debug.apk')">
-                    安卓
-                </button>
-                <button class="download-button" onclick="downloadFile('tianji-1.0.2-arm64-v8a_armeabi-v7a-debug.ios')">
-                    苹果
-                </button>
-                <button class="download-button" onclick="downloadFile('tianji-1.0.2-arm64-v8a_armeabi-v7a-debug.exe')">
-                    Windows
-                </button>
-                <button class="download-button" onclick="downloadFile('tianji-1.0.2-arm64-v8a_armeabi-v7a-debug')">
-                    Linux
-                </button>
-            </td>
-        </tr>
-        <tr>
             <td> 1.0.1</td>
             <td>
                 <button class="download-button" onclick="downloadFile('tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.apk')">
                     安卓
                 </button>
-                <button class="download-button" onclick="downloadFile('tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.apk')">
-                    苹果
-                </button>
+
                 <button class="download-button" onclick="downloadFile('tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.exe')">
                     Windows
                 </button>
-                <button class="download-button" onclick="downloadFile('tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.exe')">
-                    Linux
-                </button>
+
             </td>
         </tr>
 
@@ -95,7 +74,7 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    function downloadFile(file) {
+    function ffdownloadFile(file) {
       var xhr = new XMLHttpRequest();
       xhr.open("GET", file);
       xhr.responseType = "blob";
@@ -107,6 +86,9 @@
         }
       };
       xhr.send();
+    }
+    function downloadFile(file){
+        window.alert(file");
     }
 
 
