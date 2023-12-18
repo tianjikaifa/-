@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下载多个静态资源文件</title>
+</head>
+
+<style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .download-button {
+            width: 100px;
+            height: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .download-button:hover {
+            background-color: #ccc;
+        }
+
+        .div-center {
+          text-align: center;
+        }
+
+
+</style>
+<body>
+
+<div class="div-center">
+    <h4> 天纪软件</h4>
+    <span>理论上此软件支持安卓、苹果、linux和windows<p></p>目前仅支持安卓和windows<p></p>后面看大家反馈吧</span>
+</div>
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>版本号</th>
+            <th>下载版本</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td> 1.0.2</td>
+            <td>
+                <button class="download-button" onclick="downloadFile('tianji-1.0.2-arm64-v8a_armeabi-v7a-debug.apk')">
+                    安卓
+                </button>
+                <button class="download-button" onclick="downloadFile('tianji-1.0.2-arm64-v8a_armeabi-v7a-debug.ios')">
+                    苹果
+                </button>
+                <button class="download-button" onclick="downloadFile('tianji-1.0.2-arm64-v8a_armeabi-v7a-debug.exe')">
+                    Windows
+                </button>
+                <button class="download-button" onclick="downloadFile('tianji-1.0.2-arm64-v8a_armeabi-v7a-debug')">
+                    Linux
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td> 1.0.1</td>
+            <td>
+                <button class="download-button" onclick="downloadFile('tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.apk')">
+                    安卓
+                </button>
+                <button class="download-button" onclick="downloadFile('tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.apk')">
+                    苹果
+                </button>
+                <button class="download-button" onclick="downloadFile('tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.exe')">
+                    Windows
+                </button>
+                <button class="download-button" onclick="downloadFile('tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.exe')">
+                    Linux
+                </button>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function downloadFile(file) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", file);
+      xhr.responseType = "blob";
+      xhr.onload = function() {
+        if (this.status === 200) {
+          var blob = this.response;
+          var fileSaver = new FileSaver();
+          fileSaver.save(blob, file);
+        }
+      };
+      xhr.send();
+    }
+
+
+
+</script>
+</body>
+</html>
