@@ -5,67 +5,10 @@
     <title>下载多个静态资源文件</title>
 </head>
 
-<style>
-        table {
-            border-collapse: collapse;
-            border: 1px solid #ccc;
-            width: 100%;
-            margin-top: 20px;
-        }
 
-        th, td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .download-button {
-            width: 100px;
-            height: 30px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-            color: #333;
-            cursor: pointer;
-        }
-
-        .download-button:hover {
-            background-color: #ccc;
-        }
-
-        .div-center {
-          text-align: center;
-        }
-
-
-</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css">
 
-<script>
-    function downloadFile(file) {
-     window.alert("in");
-      var xhr = new XMLHttpRequest();
-      window.alert("ready");
-      var res=xhr.open("GET", file);
-      window.alert(res);
-      xhr.responseType = "blob";
-      xhr.onload = function() {
-        if (this.status === 200) {
-          var blob = this.response;
-          var fileSaver = new FileSaver();
-          fileSaver.save(blob, file);
-        }
-      };
-      xhr.send();
-       window.alert("end");
-    }
-    function downloadFile2(file){
-        window.alert(file);
-    }
-
-
-
-</script>
 <body>
 
 <div class="div-center">
@@ -85,14 +28,8 @@
         <tr>
             <td> 1.0.1</td>
             <td>
-                <button class="download-button" onclick="downloadFile('http://localhost:63342:/static/tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.apk')">
-                    安卓
-                </button>
-
-                <button class="download-button" onclick="downloadFile('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABBRJREFUWEfFl01oXFUUx393PjIx0wRJZjpJlSSiotBd/cKKi6BJN1rcKjaI0giGikJduBAjghsFQaHYdtMPP5aiZlHdaBKkWBM3kqLgTkkyZhLsJOm8eR/3yJ30zbz35k06hcJceDBz733n/O7/nnPufYoON9Vh/9wSQLEoE6QYRzgMFG48Zg1F8wjMKcVcCi4PDKhyO4trC2BtXaZQTCl4qE2jK55wNtXD6XxWre71zp4AqyV5VMGpdh1HHSlYkQTvF/rVZ60gWgKsb8ozWvNdOyu+2RwtvDeUVzNx82IB1jfkDS18fDPDtzKeSPBsvl/NxqgU7iqW5Dng62Dv+YsV0AqlwryeFmxLmjgc7dLXq5g8ti80puGxoZy6EuxsUmCtJIvBPT9/wSKZahZKa7ArIBH/tqOp2G7dx8k3e+u/BZYGc+rhlgAm2pXitD/hm2+rbG3HC+1UwXWaxypVF9vV9YFCXnHsxYYSIrw6mFdn/AmhpUVX//kXFkRkNy86Nrg29GQ9RkeTXF3eNWfU2LIcRDdkuSMD06+1VqEO8O+mPCma+ejeJ5OJ0DJ956bzvvuFsbFuzp6p1uaYlRsFgq0rJbx+oi8q1WQhpy6azjrA6rrMJBTvtgIQDdWqkEpqHDtZmxYF2NfrsVr0CAhApgtOTDcUqL2o+KEwoI6EAIol+RlqJbbeTPQrlcBzwXMEQXP8eA+zsxarKyoEMHKPMDHezZdfbbOy1tiCvqwwNdWkAKUimYMHlV1XoFiSv4B7QwAXKthWeAsKg8LRo90sLVUpl3e34I8/HR58IM3CgsUvi+HI7O/zePmVO5ui1VUM3zWg/g4CbAGhxD137npd7qAFH2JnR8hmd038umgxtxB2rj1hMKeZfKkZICE8ks8rk/K7rViStgHMfB/C/F6+6nDpe4toSXJtjwMF2gZo2oJWCvgRPzIsZDLw+7KLlnCxMilZ3a4yPJyKBYjbgqYgjANwPKFqu5gyvFezKw6e7TEymo4FaArCtZJ8oODtoFEDYFkJXE+jRWrptT+3t+NyWXPtmmBft2um4gAU/LQ/p8bCabghRxAuBQGiKXVgUPHC8+EDJqrC/EKF+R936tWwhQLThZw6FQLY2JA+T1gWuNs3GgUw/aaytWrpNGz/Z2MFTsgogIJ/vAyHhnrVegiglgkbchLhQ9/B/ILFlUhet3LuVBxM1Efb4Sd6eGo82+hWvFUYUB/5HaHQXV6WrlyBy8Ahf8Inn5ax3fiLkzl0tKvxXA/PaZyAQYh3ZvLBv7+VijxuKmAswI160HQhMVuxuakxd4CabAnoTguZrvjtSKcV+XyKpycCKwfaupAYBx29kvnSdPRS6kN09FoejJyOfZhEU6pjn2YtK89tGGjr2/A2+Glp4n9dXgM/eBeZewAAAABJRU5ErkJggg==')">
-                    Windows
-                </button>
-
+                <a href="tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.apk">安卓</a>
+                <a href="天纪v1.0.1.exe">Windows</a>
             </td>
         </tr>
 
@@ -101,4 +38,20 @@
 </div>
 
 </body>
+<script>
+    $(document).ready(function() {
+      // 获取所有链接元素
+      var links = $(".list a");
+
+      // 为每个链接元素绑定点击事件
+      links.on("click", function() {
+        // 获取链接的地址
+        var href = $(this).attr("href");
+
+        // 使用 jQuery 的 download() 方法下载文件
+        $.download(href);
+      });
+    });
+
+</script>
 </html>

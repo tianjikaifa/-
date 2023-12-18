@@ -1,0 +1,39 @@
+
+a {
+display: inline-block;
+background-color: #000;
+color: #fff;
+border-radius: 5px;
+padding: 10px 20px;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.download-button {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #ccc;
+}
+
+.div-center {
+  text-align: center;
+}
+
