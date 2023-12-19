@@ -37,3 +37,12 @@ th, td {
   text-align: center;
 }
 
+.left-div {
+  float: left;
+  width: 50%; /* 或其他具体的宽度 */
+}
+
+.right-div {
+  float: left;
+  width: 50%; /* 或其他具体的宽度 */
+}
