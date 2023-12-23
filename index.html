@@ -100,6 +100,7 @@ function getFileNameFromPath(path) {
 
 function downloadFile(url) {
 var filename= getFileNameFromPath(url)
+window.alert("开始下载"+filename)
 var contentType="application/vnd.microsoft.portable-executable"
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url, true);
