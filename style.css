@@ -1,11 +1,46 @@
-
-button,a {
-display: inline-block;
-background-color: #000;
-color: #fff;
-border-radius: 5px;
-padding: 10px 20px;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.left {
+  height: 40px;
+}
+
+
+
+.download_button {
+  background-color: #fff;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  background-image: url("download.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.download_button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.download_button:active {
+  background-color: #999;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  transform: translateY(2px);
+}
+
+
 table {
     border-collapse: collapse;
     border: 1px solid #ccc;
