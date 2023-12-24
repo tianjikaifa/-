@@ -19,3 +19,4 @@ function downloadFile(url) {
   if (result){
     saveAs(url,filename)
   }
+  }
