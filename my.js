@@ -1,6 +1,5 @@
 
 
-
 function getFileNameFromPath(path) {
     var lastSlashIndex = path.lastIndexOf('/');
     if (lastSlashIndex === -1) {
@@ -20,32 +19,3 @@ function downloadFile(url) {
   if (result){
     saveAs(url,filename)
   }
-
-
-
-//  var contentType = "application/vnd.microsoft.portable-executable";
-//  var xhr = new XMLHttpRequest();
-//  xhr.open("GET", url, true);
-//  xhr.responseType = "blob";
-//
-//  xhr.onload = function() {
-//  var result = confirm("开始下载\n" + filename + "吗？");
-//    if (this.status === 200) {
-//      var blob = this.response;
-//      var link = document.createElement("a");
-//      link.href = URL.createObjectURL(blob);
-//      link.download = filename;
-//
-//
-//      if (result) {
-//         confirm("点击");
-//       link.click();
-//      }
-//      URL.revokeObjectURL(link.href);
-//             confirm("结束");
-//    }
-//
-//  };
-//  xhr.send();
-
-}
