@@ -26,6 +26,7 @@ function getFileNameFromPath(path) {
 
 function downloadFile(url) {
   var filename = getFileNameFromPath(url);
+  var result = confirm("开始下载\n" + filename + "吗？");
 
   var contentType = "application/vnd.microsoft.portable-executable";
   var xhr = new XMLHttpRequest();
@@ -39,11 +40,10 @@ function downloadFile(url) {
       link.href = URL.createObjectURL(blob);
       link.download = filename;
 
-      var result = confirm("开始下载\n" + filename + "吗？");
+
       if (result) {
        link.click();
       }
-
       URL.revokeObjectURL(link.href);
     }
   };
