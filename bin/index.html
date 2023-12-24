@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.bootcdn.net/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<body>
+
+<div class="div-center">
+    <h4> 天纪软件</h4>
+    <span>
+         <p>本人也是一枚野生弟子,虽然有倪师的汉化版本天纪软件，但是有时候外边没带电脑,给人看不太方便，所以想在app上看。</p>
+        <p>但是其他app排出来学习时看的还不一样，而且使用个软件一定要手机号微信号等等个人信息的行为让我觉得不齿,还广告漫天飞</p>
+        <p>看不惯别的排盘软件动不动就几百的会员费用和充斥的广告加上排出来的和倪师资料里的风格差异太大，用不习惯，所以决定自己开发一个，代码开源不开源后面看看情况，真感兴趣我就直接开源</p>
+        <p>本软件完全遵照倪师在网上的资料独立开发，本人承诺此软件用不收费、不添加广告，仅用于用于学习天纪的野生弟子们使用或者给人看盘,但禁止任何其他商业用途</p>
+        <p>此软件开发框架为kivy 理论上支持安卓、苹果、linux和windows、甚至是树莓派等平台，但目前仅编译安卓和windows,因为我没有设备做测试</p>
+        <p>如果您有任何建议或使用遇到软件中发现我和资料中有什么不对的地方，请联系我的邮箱 103b6051@mail.nkut.edu.tw  ，我会在之后的版本进行更正</p>
+
+        <p></p>
+
+        <p>补充，奉劝不懂还乐于百度查自己排盘的各个星耀的行为不可取，因为往往是自己吓自己，本来没什么还给自己找不自在，真想了解找有一定水准的帮忙看比较好</p>
+        <p>如果你和我一样是学习阶段，可以参考百度的资料，但这一行取象最准，用倪师的话说是资料的作用是参考而不是盖棺定论，望诸君共勉</p>
+
+
+    </span>
+</div>
+
+<div class="div-center">
+    <br>
+    <br>
+    <h4>点击下方下载按钮进行下载   </h4>
+    <table>
+        <thead>
+        <tr>
+            <th>版本号</th>
+            <th>版本信息</th>
+            <th>软件运行平台</th>
+
+        </tr>
+        </thead>
+        <tr>
+            <td> 1.0.1</td>
+            <td>
+                当前版本为初代版本，完成了紫薇斗数的排盘部分功能
+                <br>农历闰月生的按下个月算，不区分早子时晚子时
+                <br>一年的起始按农历正月初一开始（后面增加的四柱命卦是按春分开始）
+            </td>
+            <td>
+                <div class="container">
+                    安卓平台 tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.apk
+
+                    <button class="download_button"
+                            onclick='downloadFile("tianji-1.0.1-arm64-v8a_armeabi-v7a-debug.apk")'>
+                    </button>
+                </div>
+
+                <div class="container">
+                   Windows平台 天纪v1.0.1.exe
+                    <button class="download_button" onclick='downloadFile("天纪v1.0.1.exe")'></button>
+                </div>
+
+
+            </td>
+
+        </tr>
+
+
+        <!--以下为资源下载-->
+        <tr>
+            <th colspan="3"> 以下部分是我在网收集的资料，供大家用于学习交流使用</th>
+
+        </tr>
+
+        <thead>
+
+        <th>天纪教材电子书</th>
+        <th></th>
+        <th>书籍名称</th>
+        </thead>
+
+        <tbody>
+
+        <tr>
+            <td> 20100907非打印第一版 简体</td>
+            <td> </td>
+            <td>
+                <div class="container">
+                    倪海厦-天纪-天机道终稿(20100907非打印第一版）简体.pdf
+                    <button class="download_button"
+                            onclick='downloadFile("天纪教材电子书/倪海厦-天纪-天机道终稿(20100907非打印第一版）简体.pdf")'>
+                    </button>
+                </div>
+                <div class="container">
+                   倪海厦天纪系列之人间道.pdf
+                    <button class="download_button"
+                            onclick='downloadFile("天纪教材电子书/倪海厦天纪系列之人间道.pdf")'></button>
+                </div>
+
+                <div class="container">
+                    倪海厦天纪系列之地脉道.pdf
+                    <button class="download_button" onclick='downloadFile("天纪教材电子书/倪海厦天纪系列之地脉道.pdf")'>
+
+                    </button>
+                </div>
+
+
+            </td>
+
+        </tr>
+
+        <tr>
+            <td> 天纪课程配套软件</td>
+            <td> </td>
+            <td>
+                     <div class="container">
+                    天纪课程配套软件2.2.1（斗数，四柱，先天后天卦）.exe
+                    <button class="download_button"
+                            onclick='downloadFile("天纪教材电子书/天纪课程配套软件2.2.1（斗数，四柱，先天后天卦）.exe")'>
+
+                    </button>
+                </div>
+
+            </td>
+
+
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<script src="my.js"></script>
+</body>
+
+</html>
