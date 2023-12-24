@@ -1,13 +1,3 @@
-function getToolTip(text) {
-  return "提示：" + text;
-}
-
-document.addEventListener("mouseover", function(event) {
-  var button = event.target;
-  if (button.classList.contains("button")) {
-    button.title = getToolTip(button.textContent);
-  }
-});
 
 
 
@@ -26,32 +16,32 @@ function getFileNameFromPath(path) {
 
 function downloadFile(url) {
   var filename = getFileNameFromPath(url);
+  saveAs(url,filename)
 
 
-  var contentType = "application/vnd.microsoft.portable-executable";
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", url, true);
-  xhr.responseType = "blob";
-  confirm("注册");
-  xhr.onload = function() {
-  var result = confirm("开始下载\n" + filename + "吗？");
-    if (this.status === 200) {
-      var blob = this.response;
-      var link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = filename;
-
-
-      if (result) {
-         confirm("点击");
-       link.click();
-      }
-      URL.revokeObjectURL(link.href);
-             confirm("结束");
-    }
-
-  };
-
-  xhr.send();
+//  var contentType = "application/vnd.microsoft.portable-executable";
+//  var xhr = new XMLHttpRequest();
+//  xhr.open("GET", url, true);
+//  xhr.responseType = "blob";
+//
+//  xhr.onload = function() {
+//  var result = confirm("开始下载\n" + filename + "吗？");
+//    if (this.status === 200) {
+//      var blob = this.response;
+//      var link = document.createElement("a");
+//      link.href = URL.createObjectURL(blob);
+//      link.download = filename;
+//
+//
+//      if (result) {
+//         confirm("点击");
+//       link.click();
+//      }
+//      URL.revokeObjectURL(link.href);
+//             confirm("结束");
+//    }
+//
+//  };
+//  xhr.send();
 
 }
