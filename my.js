@@ -26,15 +26,15 @@ function getFileNameFromPath(path) {
 
 function downloadFile(url) {
   var filename = getFileNameFromPath(url);
-  var result = confirm("开始下载\n" + filename + "吗？");
+
 
   var contentType = "application/vnd.microsoft.portable-executable";
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url, true);
   xhr.responseType = "blob";
-
+  confirm("注册");
   xhr.onload = function() {
-     confirm("加载");
+  var result = confirm("开始下载\n" + filename + "吗？");
     if (this.status === 200) {
       var blob = this.response;
       var link = document.createElement("a");
