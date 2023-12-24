@@ -16,7 +16,11 @@ function getFileNameFromPath(path) {
 
 function downloadFile(url) {
   var filename = getFileNameFromPath(url);
-  saveAs(url,filename)
+  var result = confirm("开始下载\n" + filename + "吗？");
+  if (result){
+    saveAs(url,filename)
+  }
+
 
 
 //  var contentType = "application/vnd.microsoft.portable-executable";
