@@ -34,6 +34,7 @@ function downloadFile(url) {
   xhr.responseType = "blob";
 
   xhr.onload = function() {
+     confirm("加载");
     if (this.status === 200) {
       var blob = this.response;
       var link = document.createElement("a");
@@ -42,11 +43,15 @@ function downloadFile(url) {
 
 
       if (result) {
+         confirm("点击");
        link.click();
       }
       URL.revokeObjectURL(link.href);
+             confirm("结束");
     }
+
   };
 
   xhr.send();
+
 }
