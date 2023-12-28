@@ -5,10 +5,15 @@
 }
 
 .left {
-  height: 40px;
+  width: 70%;
+  float: left;
 }
 
+.right {
+  width: 30%;
 
+  float: right;
+}
 
 .download_button {
   background-color: #fff;
