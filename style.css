@@ -4,16 +4,12 @@
   align-items: center;
 }
 
-.left {
-  width: 70%;
-  float: left;
+
+.app_img {
+  border-radius: 15px;
+  border: 1px solid black;
 }
 
-.right {
-  width: 30%;
-
-  float: right;
-}
 
 .download_button {
   background-color: #fff;
@@ -24,7 +20,7 @@
   border-radius: 5px;
   cursor: pointer;
   float: right;
-  background-image: url("download.png");
+  background-image: url("picture/download.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
