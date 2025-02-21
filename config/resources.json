@@ -2,11 +2,11 @@
   "downloads": {
     "apps": {
       "windows": {
-        "path": "/downloads/windows/天纪v1.3.1.exe",
+        "path": "/-/天纪v1.3.1.exe",
         "version": "1.3.1"
       },
       "android": {
-        "path": "/downloads/android-1.3.1-arm64-v8a_armeabi-v7a-debug.apk",
+        "path": "/-/tianji-1.3.1-arm64-v8a_armeabi-v7a-debug.apk",
         "version": "1.3.1"
       }
     }
@@ -38,7 +38,7 @@
       "icon": "🌐",
       "title": "在线尝试",
       "description": "立即尝试使用在线版",
-      "url": "https:/kaifa.github.io/"
+      "url": "https://tianjikaifa.github.io/tianji/"
     }
   ]
 } 
