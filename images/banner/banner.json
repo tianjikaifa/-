@@ -2,31 +2,31 @@
   "banners": [
     {
       "id": 1,
-      "image": "/tianji/images/banner/app1.3.1.png",
+      "image": "/images/banner/app1.3.1.png",
       "title": "安卓应用",
       "link": ""
     },
     {
       "id": 2,
-      "image": "/tianji/images/banner/win1.3.1.png",
+      "image": "/images/banner/win1.3.1.png",
       "title": "Windows 电脑",
       "link": "#sync"
     },
     {
       "id": 3,
-      "image": "/tianji/images/banner/win1.2.4.png",
+      "image": "/images/banner/win1.2.4.png",
       "title": "排盘样例",
       "link": "#ai"
     },
     {
       "id": 4,
-      "image": "/tianji/images/banner/online1.png",
+      "image": "/images/banner/online1.png",
       "title": "在线使用",
       "link": "#security"
     },
     {
       "id": 5,
-      "image": "/tianji/images/banner/online2.png",
+      "image": "/images/banner/online2.png",
       "title": "在线使用",
       "link": "#security2"
     }
